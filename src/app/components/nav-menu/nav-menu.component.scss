@@ -1,0 +1,43 @@
+.menu {
+    font-family: "Roboto", sans-serif;
+    width: 20%;
+    margin: 0px 10px 0 15px;
+    padding: 30px 0;
+
+    &__item {
+        list-style-type: none;
+    }
+
+    &__item a:hover {
+        color: rgb(92, 148, 252);
+        border-left: 3px solid rgb(92, 148, 252);
+        border-radius: 4px;
+    }
+
+    &__link {
+        transition: 0.5s;
+        border: 3px solid white;
+        display: flex;
+        align-items: center;
+        color: rgb(170, 165, 165);
+        text-align: center;
+        padding: 15px 30px 15px 20px;
+        text-decoration: none;
+    }
+
+    &__link span {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    &__icon {
+        margin-right: 25px;
+    }
+
+    /*  Style active link */
+
+    .active {
+        color: rgb(92, 148, 252);
+        border-left: 3px solid rgb(92, 148, 252);
+    }
+}

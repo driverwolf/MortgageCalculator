@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+mat-hint {
+    color: red;
+}
+mat-form-field {
+    margin-top: 30px;
+}
+.calc {
+    margin-left: 50px;
+}

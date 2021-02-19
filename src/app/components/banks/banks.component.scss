@@ -1,0 +1,35 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+}
+.main {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+table[mat-table] {
+    margin-top: 15px;
+    border-collapse: separate;
+    border-spacing: 10px 0;
+    text-align: center;
+    th,
+    td.mat-cell:first-of-type,
+    td.mat-cell:last-of-type {
+        text-align: center;
+        padding: 0;
+    }
+}
+.edit {
+    width: 57px;
+}
+.add mat-form-field {
+    width: 17%;
+    margin: 20px 3px 0 3px;
+}
+ul {
+    padding-inline-start: 30px;
+    li {
+        margin-top: 10px;
+    }
+}

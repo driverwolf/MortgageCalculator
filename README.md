@@ -1,3 +1,7 @@
+# My instruction
+
+Everythink have alredy set up. Just fill in the fields and click button.
+
 # MortgageCalculator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.

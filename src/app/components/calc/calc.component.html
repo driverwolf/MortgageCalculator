@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Initial loan</mat-label>
+            <input matInput placeholder="Enter initial loan" [(ngModel)]='initialLoan' (input)='corectLoan()'
+                [maxlength]="selectedBank.maximumLoan.toString().length">
+            <mat-icon matSuffix class="material-icons">monetization_on</mat-icon>
+            <mat-hint *ngIf='messegeLoanShow'>Max initial loan: {{selectedBank.maximumLoan}}
+            </mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Down payment</mat-label>
+            <input matInput placeholder="Enter down payment" [(ngModel)]='downPayment' (input)='corectDownPayment()'
+                [minlength]="selectedBank.minimumDownPayment.toString().length">
+            <mat-icon matSuffix class="material-icons">monetization_on</mat-icon>
+            <mat-hint *ngIf='messegeDownPaymentShow'>Min down payment:
+                {{selectedBank.minimumDownPayment}}</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Favorite bank</mat-label>
+            <mat-select [(value)]='selectedBank'>
+                <mat-option *ngFor="let bank of banks" [value]="bank">
+                    {{bank.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline" class="calc">
+        <mat-label>Result</mat-label>
+        <input matInput placeholder="" disabled [(ngModel)]='mounthlyPayment'>
+        <mat-icon matSuffix class="material-icons">monetization_on</mat-icon>
+        <br>
+        <br>
+        <button mat-raised-button (click)='calculate()'>Calculate</button>
+    </mat-form-field>
+
+</div>
