@@ -12,7 +12,10 @@
                 <td mat-cell *matCellDef="let bank"> <span *ngIf='!bank.editIsActive'>{{bank[column]}}</span>
                     <mat-form-field appearance="standard" *ngIf='bank.editIsActive' class="edit">
                         <mat-label>{{bank[column]}}</mat-label>
-                        <input matInput [placeholder]="bank[column]" [(ngModel)]='bank[column]'>
+                        <input *ngIf='column === "name"' matInput [placeholder]="bank[column]"
+                            [(ngModel)]='bank[column]'>
+                        <input *ngIf='column !== "name"' type="number" matInput [placeholder]="bank[column]"
+                            [(ngModel)]='bank[column]'>
                     </mat-form-field>
                 </td>
             </ng-container>
@@ -46,19 +49,19 @@
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Interest Rate</mat-label>
-                <input matInput placeholder="Enter interest rate" [(ngModel)]='interestRate'>
+                <input matInput placeholder="Enter interest rate" [(ngModel)]='interestRate' type="number">
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Maximum Loan</mat-label>
-                <input matInput placeholder="Enter maximum loan" [(ngModel)]='maximumLoan'>
+                <input matInput placeholder="Enter maximum loan" [(ngModel)]='maximumLoan' type="number">
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Minimum Down Payment</mat-label>
-                <input matInput placeholder="Enter minimum down payment" [(ngModel)]='minimumDownPayment'>
+                <input matInput placeholder="Enter minimum down payment" [(ngModel)]='minimumDownPayment' type="number">
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Loan Term</mat-label>
-                <input matInput placeholder="Enter loan term" [(ngModel)]='loanTerm'>
+                <input matInput placeholder="Enter loan term" [(ngModel)]='loanTerm' type="number">
             </mat-form-field>
             <button mat-raised-button color='accent' (click)='add()'>Add</button>
         </div>

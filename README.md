@@ -1,6 +1,9 @@
 # My instruction
-
-Everythink have alredy set up. Just fill in the fields and click button.
+Steps:
+1. git clone https://github.com/driverwolf/MortgageCalculator.git
+2. npm install
+3. npm run start
+4. you can take to look at http://localhost:8080
 
 # MortgageCalculator
 
